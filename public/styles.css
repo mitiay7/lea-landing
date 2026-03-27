@@ -1769,10 +1769,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .demo-inner {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
   padding: 64px;
   border-radius: var(--radius-xl);
   border: 1px solid var(--border);
@@ -1827,12 +1828,14 @@ h1, h2, h3, h4, h5, h6 {
   gap: 16px;
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 520px;
 }
 
 .demo-input-group {
   display: flex;
   align-items: stretch;
-  max-width: 520px;
+  width: 100%;
   border-radius: 60px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2076,11 +2079,9 @@ h1, h2, h3, h4, h5, h6 {
   .pricing-grid { grid-template-columns: 1fr; max-width: 480px; }
 
   .demo-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
     padding: 40px;
   }
-  .demo-content { text-align: center; }
 }
 
 @media (max-width: 768px) {
