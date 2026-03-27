@@ -1161,18 +1161,15 @@
           <div class="demo-content animate-on-scroll">
             <span class="section-label">Без пароля и регистрации</span>
             <h2 class="section-title">Начните<br><span class="text-gradient">бесплатно</span></h2>
-            <p class="demo-desc">Введите email — мы отправим ссылку для входа. Без пароля, без регистрации, без карты.</p>
-            <p class="demo-desc demo-desc-ai">AI-ассистент проведёт вас через весь процесс создания и поможет настроить каждый раздел.</p>
+            <p class="demo-desc">Введите email — через пару минут у&nbsp;вас будет полноценное мероприятие. 14&nbsp;дней без&nbsp;ограничений, без&nbsp;карты.</p>
+            <p class="demo-desc demo-desc-ai">AI-ассистент проведёт вас через весь процесс создания и&nbsp;поможет настроить каждый раздел.</p>
           </div>
           <form class="demo-form animate-on-scroll" style="--delay: 0.15s" id="demoForm">
-            <div class="demo-field-row">
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
-              </div>
-              <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
-                Попробовать бесплатно
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <div class="demo-input-group">
+              <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" class="demo-input">
+              <button type="submit" class="demo-submit" id="submitBtn">
+                <span class="demo-submit-text">Попробовать бесплатно</span>
+                <svg class="demo-submit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
             <div class="form-error" id="formError" hidden></div>

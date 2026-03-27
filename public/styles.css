@@ -1829,49 +1829,56 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
-.demo-field-row {
+.demo-input-group {
   display: flex;
-  gap: 12px;
-  align-items: flex-end;
-}
-
-.form-field {
-  flex: 1;
-  min-width: 0;
-}
-
-.form-field label {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-bottom: 8px;
-  letter-spacing: 0.02em;
-}
-
-.form-field input {
-  width: 100%;
-  padding: 14px 18px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  overflow: hidden;
+}
+.demo-input-group:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow), 0 0 20px rgba(67, 97, 238, 0.1);
+}
+
+.demo-input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 18px;
+  border: none;
+  background: transparent;
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: 15px;
-  transition: all 0.3s var(--ease);
   outline: none;
 }
-.form-field input::placeholder { color: var(--text-tertiary); }
-.form-field input:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-glow), 0 0 20px rgba(67, 97, 238, 0.1);
-  background: rgba(255, 255, 255, 0.05);
+.demo-input::placeholder {
+  color: var(--text-tertiary);
 }
 
-.demo-field-row .btn {
-  flex-shrink: 0;
+.demo-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
   white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s var(--ease);
+  flex-shrink: 0;
+}
+.demo-submit:hover {
+  background: var(--accent-light);
+}
+.demo-submit-icon {
+  flex-shrink: 0;
 }
 
 .form-error {
@@ -2097,7 +2104,8 @@ h1, h2, h3, h4, h5, h6 {
   .hero-scene { width: 240px; height: 500px; }
 
   .demo-inner { padding: 28px; border-radius: var(--radius-lg); }
-  .demo-field-row { flex-direction: column; }
+  .demo-input-group { flex-direction: column; }
+  .demo-submit { padding: 14px 24px; justify-content: center; }
 
   .hero-stats { flex-wrap: wrap; gap: 16px; }
   .hero-stat-divider { display: none; }
