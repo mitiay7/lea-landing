@@ -1831,30 +1831,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .demo-input-group {
   display: flex;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
-  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
-  overflow: hidden;
+  align-items: stretch;
+  max-width: 520px;
+  border-radius: 60px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease), background 0.3s var(--ease);
 }
 .demo-input-group:focus-within {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-glow), 0 0 20px rgba(67, 97, 238, 0.1);
+  border-color: rgba(67, 97, 238, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px var(--accent-glow), 0 0 30px rgba(67, 97, 238, 0.08);
 }
 
 .demo-input {
   flex: 1;
   min-width: 0;
-  padding: 14px 18px;
+  padding: 14px 22px;
   border: none;
   background: transparent;
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   outline: none;
+  border-radius: 60px;
 }
 .demo-input::placeholder {
   color: var(--text-tertiary);
+  opacity: 0.6;
 }
 
 .demo-submit {
@@ -1862,7 +1867,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 24px;
+  padding: 14px 28px;
   background: var(--accent);
   color: #fff;
   font-family: var(--font-display);
@@ -1870,12 +1875,18 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   white-space: nowrap;
   border: none;
+  border-radius: 60px;
   cursor: pointer;
-  transition: background 0.3s var(--ease);
+  transition: background 0.3s var(--ease), transform 0.2s var(--ease), box-shadow 0.3s var(--ease);
   flex-shrink: 0;
 }
 .demo-submit:hover {
   background: var(--accent-light);
+  box-shadow: 0 4px 16px rgba(67, 97, 238, 0.3);
+  transform: translateY(-1px);
+}
+.demo-submit:active {
+  transform: translateY(0);
 }
 .demo-submit-icon {
   flex-shrink: 0;
@@ -2104,8 +2115,9 @@ h1, h2, h3, h4, h5, h6 {
   .hero-scene { width: 240px; height: 500px; }
 
   .demo-inner { padding: 28px; border-radius: var(--radius-lg); }
-  .demo-input-group { flex-direction: column; }
-  .demo-submit { padding: 14px 24px; justify-content: center; }
+  .demo-input-group { flex-direction: column; border-radius: var(--radius-md); padding: 4px; }
+  .demo-input { border-radius: var(--radius-md); padding: 14px 18px; }
+  .demo-submit { padding: 14px 24px; justify-content: center; border-radius: var(--radius-md); }
 
   .hero-stats { flex-wrap: wrap; gap: 16px; }
   .hero-stat-divider { display: none; }
