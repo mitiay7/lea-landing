@@ -1159,35 +1159,31 @@
             <div class="demo-orb demo-orb-2"></div>
           </div>
           <div class="demo-content animate-on-scroll">
-            <span class="section-label">14 дней бесплатно</span>
-            <h2 class="section-title">Попробуйте<br><span class="text-gradient">бесплатно</span></h2>
-            <p class="demo-desc">Полный доступ ко всем функциям на 14 дней — без привязки карты. Создайте тестовое мероприятие прямо сейчас.</p>
+            <span class="section-label">Без пароля и регистрации</span>
+            <h2 class="section-title">Начните<br><span class="text-gradient">бесплатно</span></h2>
+            <p class="demo-desc">Введите email — мы отправим ссылку для входа. Без пароля, без регистрации, без карты.</p>
             <p class="demo-desc demo-desc-ai">AI-ассистент проведёт вас через весь процесс создания и поможет настроить каждый раздел.</p>
           </div>
-          <form class="demo-form animate-on-scroll" style="--delay: 0.15s" id="demoForm" action="https://formspree.io/f/xwpkgdvl" method="POST">
-            <div class="form-group">
-              <label for="name" class="form-label">Имя <span class="required" aria-label="обязательное поле">*</span></label>
-              <input type="text" id="name" name="name" class="form-input" placeholder="Ваше имя" required autocomplete="name">
+          <form class="demo-form animate-on-scroll" style="--delay: 0.15s" id="demoForm">
+            <div class="demo-field-row">
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                Попробовать бесплатно
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
             </div>
-            <div class="form-group">
-              <label for="email" class="form-label">Email <span class="required" aria-label="обязательное поле">*</span></label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" required autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label for="company" class="form-label">Компания</label>
-              <input type="text" id="company" name="company" class="form-input" placeholder="Название компании" autocomplete="organization">
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg form-submit" id="submitBtn">
-              Начать бесплатно
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
+            <div class="form-error" id="formError" hidden></div>
           </form>
           <div class="form-success" id="formSuccess" hidden>
-            <div class="success-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4361ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-            </div>
-            <h3 class="success-title">Заявка отправлена!</h3>
-            <p class="success-desc">Мы свяжемся с вами в ближайшее время и активируем пробный период.</p>
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <h3 class="success-title">Проверьте почту</h3>
+            <p class="success-desc">Мы отправили ссылку для входа на ваш email. Ссылка действительна 15 минут.</p>
           </div>
         </div>
       </div>
