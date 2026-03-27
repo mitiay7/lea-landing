@@ -7,8 +7,15 @@
         X-Content-Type-Options nosniff
         X-Frame-Options DENY
         Referrer-Policy strict-origin-when-cross-origin
-        Cache-Control "public, max-age=60"
     }
+
+    # Long cache for static assets (container rebuild = cache bust)
+    @static path *.css *.js *.svg *.ico *.png *.jpg *.jpeg *.webp *.woff2
+    header @static Cache-Control "public, max-age=31536000, immutable"
+
+    # Short cache for HTML
+    @html path *.html /
+    header @html Cache-Control "public, max-age=60"
 
     handle_errors {
         rewrite * /index.html
