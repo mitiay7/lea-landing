@@ -108,6 +108,7 @@
   var formSuccess = document.getElementById('formSuccess');
   var formError = document.getElementById('formError');
   var submitBtn = document.getElementById('submitBtn');
+  var originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
 
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -118,7 +119,7 @@
 
       if (formError) formError.hidden = true;
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Отправка...';
+      submitBtn.innerHTML = 'Отправка...';
 
       fetch('https://api.lea-dev.site/v1/auth/magic-link', {
         method: 'POST',
@@ -129,9 +130,13 @@
           if (response.ok) {
             showSuccess();
           } else {
-            return response.json().then(function (data) {
-              showError(data.error || 'Произошла ошибка');
-            });
+            response.json()
+              .then(function (data) {
+                showError(data.error || 'Ошибка сервера. Попробуйте позже.');
+              })
+              .catch(function () {
+                showError('Ошибка сервера. Попробуйте позже.');
+              });
           }
         })
         .catch(function () {
@@ -152,7 +157,7 @@
     }
     if (submitBtn) {
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Попробовать бесплатно';
+      submitBtn.innerHTML = originalBtnHTML;
     }
   }
 })();
