@@ -1371,7 +1371,7 @@ h1, h2, h3, h4, h5, h6 {
 .addon-item-desc {
   font-size: 0.85rem;
   color: var(--text-tertiary);
-  padding: 4px 0 24px 0;
+  padding: 4px 0 32px 0;
   line-height: 1.4;
 }
 
