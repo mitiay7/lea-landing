@@ -1,3 +1,19 @@
+/* ===== Self-hosted Fonts ===== */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('/fonts/outfit.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('/fonts/source-sans-3.woff2') format('woff2');
+}
+
 /* ===== Reset & Base ===== */
 *, *::before, *::after {
   margin: 0;
