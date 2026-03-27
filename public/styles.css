@@ -1824,12 +1824,23 @@ h1, h2, h3, h4, h5, h6 {
 .demo-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   position: relative;
   z-index: 1;
 }
 
-.form-label {
+.demo-field-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.form-field {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-field label {
   display: block;
   font-family: var(--font-display);
   font-size: 13px;
@@ -1839,9 +1850,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
 }
 
-.required { color: var(--accent); }
-
-.form-input {
+.form-field input {
   width: 100%;
   padding: 14px 18px;
   border-radius: var(--radius-md);
@@ -1853,16 +1862,24 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s var(--ease);
   outline: none;
 }
-.form-input::placeholder { color: var(--text-tertiary); }
-.form-input:focus {
+.form-field input::placeholder { color: var(--text-tertiary); }
+.form-field input:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-glow), 0 0 20px rgba(67, 97, 238, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
 
-.form-submit {
-  margin-top: 8px;
+.demo-field-row .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
+
+.form-error {
+  color: #ef4444;
+  font-size: 14px;
+  padding: 8px 0;
+}
+.form-error[hidden] { display: none; }
 
 .form-success {
   position: absolute;
@@ -2080,6 +2097,7 @@ h1, h2, h3, h4, h5, h6 {
   .hero-scene { width: 240px; height: 500px; }
 
   .demo-inner { padding: 28px; border-radius: var(--radius-lg); }
+  .demo-field-row { flex-direction: column; }
 
   .hero-stats { flex-wrap: wrap; gap: 16px; }
   .hero-stat-divider { display: none; }

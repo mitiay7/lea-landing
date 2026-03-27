@@ -103,56 +103,56 @@
     }, 3000);
   }
 
-  /* ---- Demo form ---- */
+  /* ---- Demo form (magic link) ---- */
   var form = document.getElementById('demoForm');
   var formSuccess = document.getElementById('formSuccess');
+  var formError = document.getElementById('formError');
   var submitBtn = document.getElementById('submitBtn');
 
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      var formData = new FormData(form);
+      var email = form.querySelector('#email').value.trim().toLowerCase();
+      if (!email) return;
+
+      if (formError) formError.hidden = true;
       submitBtn.disabled = true;
       submitBtn.textContent = 'Отправка...';
 
-      fetch(form.action, {
+      fetch('https://api.lea-dev.site/v1/auth/magic-link', {
         method: 'POST',
-        body: formData,
-        headers: { Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email }),
       })
         .then(function (response) {
           if (response.ok) {
             showSuccess();
           } else {
-            // Fallback: mailto
-            fallbackMailto(formData);
+            return response.json().then(function (data) {
+              showError(data.error || 'Произошла ошибка');
+            });
           }
         })
         .catch(function () {
-          // Fallback: mailto
-          fallbackMailto(formData);
+          showError('Ошибка сети. Попробуйте ещё раз.');
         });
     });
   }
 
   function showSuccess() {
-    if (formSuccess) {
-      formSuccess.hidden = false;
-    }
+    if (form) form.hidden = true;
+    if (formSuccess) formSuccess.hidden = false;
   }
 
-  function fallbackMailto(formData) {
-    var name = formData.get('name') || '';
-    var email = formData.get('email') || '';
-    var phone = formData.get('phone') || '';
-    var company = formData.get('company') || '';
-    var subject = encodeURIComponent('Запрос демо LEA');
-    var body = encodeURIComponent(
-      'Имя: ' + name + '\nEmail: ' + email + '\nТелефон: ' + phone + '\nКомпания: ' + company
-    );
-    window.location.href = 'mailto:hello@lea-dev.site?subject=' + subject + '&body=' + body;
-    // Still show success
-    showSuccess();
+  function showError(msg) {
+    if (formError) {
+      formError.textContent = msg;
+      formError.hidden = false;
+    }
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Попробовать бесплатно';
+    }
   }
 })();
