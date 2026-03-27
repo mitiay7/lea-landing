@@ -1181,7 +1181,9 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
 }
 .muted-value {
   color: var(--text-tertiary);
