@@ -148,6 +148,18 @@
   function showSuccess() {
     if (form) form.hidden = true;
     if (formSuccess) formSuccess.hidden = false;
+
+    setTimeout(function () {
+      if (formSuccess) formSuccess.hidden = true;
+      if (form) {
+        form.hidden = false;
+        form.querySelector('#email').value = '';
+      }
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+      }
+    }, 5000);
   }
 
   function showError(msg) {
