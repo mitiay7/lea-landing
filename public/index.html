@@ -176,66 +176,155 @@
           </div>
         </div>
         <div class="hero-visual animate-on-scroll" style="--delay: 0.2s">
-          <div class="phone-mockup">
-            <div class="phone-frame">
-              <div class="phone-notch" aria-hidden="true"></div>
-              <div class="phone-screen">
-                <div class="phone-placeholder" role="img" aria-label="Интерфейс no-code конструктора приложений для мероприятий: слева визуальный редактор приложения с блоками расписания, карты и чата, справа превью мобильного приложения на iPhone 15 Pro с программой конференции, тёмно-синяя тема, минималистичный дизайн">
-                  <!-- Placeholder UI -->
-                  <div class="mock-header">
-                    <div class="mock-logo-sm"></div>
-                    <span>Tech Conf 2026</span>
-                  </div>
-                  <div class="mock-card">
-                    <div class="mock-time">10:00</div>
-                    <div class="mock-card-body">
-                      <div class="mock-title-bar"></div>
-                      <div class="mock-subtitle-bar"></div>
+          <div class="hero-scene">
+            <!-- Floating cards -->
+            <div class="float-card float-notification" aria-hidden="true">
+              <div class="float-card-icon float-icon-bell">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+              </div>
+              <div class="float-card-body">
+                <div class="float-card-title">Через 5 мин</div>
+                <div class="float-card-text">Keynote: Будущее AI</div>
+              </div>
+            </div>
+
+            <div class="float-card float-live" aria-hidden="true">
+              <span class="live-dot"></span>
+              <span class="live-count">324</span>
+              <span class="live-label">онлайн</span>
+            </div>
+
+            <div class="float-card float-chat" aria-hidden="true">
+              <div class="float-chat-avatar">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="float-chat-bubble">Отличный доклад!</div>
+            </div>
+
+            <div class="float-card float-vote" aria-hidden="true">
+              <div class="float-vote-bar" style="--w:85%">
+                <span class="float-vote-label">React</span>
+                <span class="float-vote-pct">85%</span>
+              </div>
+              <div class="float-vote-bar" style="--w:62%">
+                <span class="float-vote-label">Vue</span>
+                <span class="float-vote-pct">62%</span>
+              </div>
+              <div class="float-vote-bar" style="--w:41%">
+                <span class="float-vote-label">Svelte</span>
+                <span class="float-vote-pct">41%</span>
+              </div>
+            </div>
+
+            <!-- Main phone -->
+            <div class="phone-mockup">
+              <div class="phone-frame">
+                <div class="phone-notch" aria-hidden="true"></div>
+                <div class="phone-screen">
+                  <div class="phone-app" role="img" aria-label="Превью мобильного приложения для конференции: расписание докладов, спикеры, навигация по разделам">
+                    <!-- Status bar -->
+                    <div class="app-statusbar">
+                      <span>9:41</span>
+                      <div class="app-statusbar-icons">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.24 4.24 0 00-6 0zm-4-4l2 2a7 7 0 019.9 0l2-2C14.13 9.13 9.87 9.13 5 13z"/></svg>
+                        <svg width="16" height="14" viewBox="0 0 24 18" fill="currentColor"><rect x="0" y="6" width="3" height="12" rx="1"/><rect x="5" y="3" width="3" height="15" rx="1"/><rect x="10" y="0" width="3" height="18" rx="1"/><rect x="15" y="4" width="3" height="14" rx="1"/><rect x="20" y="2" width="3" height="16" rx="1" opacity="0.3"/></svg>
+                        <div class="app-battery"><div class="app-battery-fill"></div></div>
+                      </div>
                     </div>
-                    <div class="mock-avatar"></div>
-                  </div>
-                  <div class="mock-card">
-                    <div class="mock-time">11:30</div>
-                    <div class="mock-card-body">
-                      <div class="mock-title-bar"></div>
-                      <div class="mock-subtitle-bar"></div>
+                    <!-- App header -->
+                    <div class="app-nav-header">
+                      <div class="app-logo-mark"></div>
+                      <span class="app-conf-title">Tech&nbsp;Conf&nbsp;2026</span>
+                      <div class="app-user-avatar">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                      </div>
                     </div>
-                    <div class="mock-avatar"></div>
-                  </div>
-                  <div class="mock-card active">
-                    <div class="mock-time">13:00</div>
-                    <div class="mock-card-body">
-                      <div class="mock-title-bar"></div>
-                      <div class="mock-subtitle-bar"></div>
+                    <!-- Date tabs -->
+                    <div class="app-date-row">
+                      <div class="app-date-tab">14 мар</div>
+                      <div class="app-date-tab active">15 мар</div>
+                      <div class="app-date-tab">16 мар</div>
                     </div>
-                    <div class="mock-avatar"></div>
-                  </div>
-                  <div class="mock-card">
-                    <div class="mock-time">14:30</div>
-                    <div class="mock-card-body">
-                      <div class="mock-title-bar"></div>
-                      <div class="mock-subtitle-bar"></div>
+                    <!-- Schedule -->
+                    <div class="app-schedule">
+                      <div class="app-session">
+                        <div class="app-session-time">10:00</div>
+                        <div class="app-session-body">
+                          <div class="app-session-title">Opening Keynote</div>
+                          <div class="app-session-speaker">
+                            <div class="app-speaker-dot" style="background:#6366f1"></div>
+                            Алексей Петров
+                          </div>
+                          <div class="app-session-meta">
+                            <span class="app-meta-tag">Зал A</span>
+                            <span class="app-meta-tag">60 мин</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="app-session is-live">
+                        <div class="app-session-time accent">11:30</div>
+                        <div class="app-session-body">
+                          <div class="app-session-title">Будущее AI в Event&nbsp;Tech</div>
+                          <div class="app-session-speaker">
+                            <div class="app-speaker-dot" style="background:#ec4899"></div>
+                            Мария Козлова
+                          </div>
+                          <div class="app-session-meta">
+                            <span class="app-meta-tag">Зал B</span>
+                            <span class="app-meta-tag">45 мин</span>
+                            <span class="app-live-badge">LIVE</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="app-session">
+                        <div class="app-session-time">13:00</div>
+                        <div class="app-session-body">
+                          <div class="app-session-title">Networking Lunch</div>
+                          <div class="app-session-speaker">
+                            <div class="app-speaker-dot" style="background:#22c55e"></div>
+                            Кофе-зона, 2&nbsp;этаж
+                          </div>
+                        </div>
+                      </div>
+                      <div class="app-session">
+                        <div class="app-session-time">14:30</div>
+                        <div class="app-session-body">
+                          <div class="app-session-title">Product-дизайн</div>
+                          <div class="app-session-speaker">
+                            <div class="app-speaker-dot" style="background:#f59e0b"></div>
+                            Дмитрий Ковалёв
+                          </div>
+                          <div class="app-session-meta">
+                            <span class="app-meta-tag">Зал A</span>
+                            <span class="app-meta-tag">45 мин</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="mock-avatar"></div>
-                  </div>
-                  <div class="mock-tabs">
-                    <div class="mock-tab active">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    </div>
-                    <div class="mock-tab">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </div>
-                    <div class="mock-tab">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                    </div>
-                    <div class="mock-tab">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <!-- Tab bar -->
+                    <div class="app-tabbar">
+                      <div class="app-tab is-active">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span>Программа</span>
+                      </div>
+                      <div class="app-tab">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Карта</span>
+                      </div>
+                      <div class="app-tab">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        <span>Чат</span>
+                      </div>
+                      <div class="app-tab">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span>Профиль</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="phone-glow" aria-hidden="true"></div>
             </div>
-            <div class="phone-glow" aria-hidden="true"></div>
           </div>
         </div>
       </div>
