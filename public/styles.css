@@ -1238,6 +1238,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .pricing-badge {
   display: inline-block;
+  align-self: center;
   padding: 6px 14px;
   border-radius: 100px;
   font-family: var(--font-display);
@@ -1318,6 +1319,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   gap: 14px;
   margin-top: 18px;
+  margin-bottom: 16px;
   position: relative;
   z-index: 1;
 }
@@ -1361,10 +1363,10 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 18px 0;
   border-bottom: 1px solid var(--border);
 }
-.addon-item:first-child { border-top: 1px solid var(--border); }
+.addon-item:first-child { border-top: none; }
 
 .addon-item-desc {
   font-size: 0.85rem;
