@@ -959,15 +959,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .case-image {
-  height: 200px;
-  background: linear-gradient(135deg, #111128 0%, #1a1a3e 100%);
+  height: 220px;
+  background: linear-gradient(135deg, #111128 0%, #0d0d24 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.case-placeholder {
-  color: var(--text-tertiary);
+  overflow: hidden;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .case-content {
@@ -1294,7 +1292,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-bottom: 36px;
+  margin-bottom: 18px;
   position: relative;
   z-index: 1;
 }
@@ -1319,7 +1317,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-top: 36px;
+  margin-top: 18px;
   position: relative;
   z-index: 1;
 }
@@ -1367,6 +1365,13 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--border);
 }
 .addon-item:first-child { border-top: 1px solid var(--border); }
+
+.addon-item-desc {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  padding: 4px 0 16px 0;
+  line-height: 1.4;
+}
 
 .addon-header {
   display: flex;
@@ -1672,148 +1677,14 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-12px);
 }
 
-/* ===== Case Card CSS Illustrations ===== */
-.case-illustration {
+/* ===== Case Card SVG Illustrations ===== */
+.case-svg {
   width: 100%;
   height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 20px;
   transition: transform 0.5s var(--ease);
 }
-.case-card:hover .case-illustration {
+.case-card:hover .case-svg {
   transform: translateY(-4px);
-}
-
-/* Card 1: Conference Hall */
-.case-illust-conference {
-  gap: 6px;
-}
-.conf-screen {
-  width: 60%;
-  height: 18px;
-  border-radius: 3px;
-  background: rgba(67, 97, 238, 0.35);
-  box-shadow: 0 0 12px rgba(67, 97, 238, 0.15);
-}
-.conf-podium {
-  width: 24px;
-  height: 14px;
-  border-radius: 3px 3px 0 0;
-  background: rgba(67, 97, 238, 0.25);
-  margin-bottom: 4px;
-}
-.conf-seats-row {
-  display: flex;
-  gap: 5px;
-  justify-content: center;
-}
-.conf-seat {
-  width: 12px;
-  height: 10px;
-  border-radius: 2px;
-  background: rgba(67, 97, 238, 0.12);
-  border: 1px solid rgba(67, 97, 238, 0.18);
-  transition: background 0.3s;
-}
-.case-card:hover .conf-seat {
-  background: rgba(67, 97, 238, 0.2);
-}
-
-/* Card 2: Corporate / Training Room */
-.case-illust-corporate {
-  position: relative;
-}
-.corp-whiteboard {
-  width: 50%;
-  height: 14px;
-  border-radius: 3px;
-  background: rgba(67, 97, 238, 0.3);
-  position: absolute;
-  top: 12%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.corp-table {
-  width: 40%;
-  height: 36%;
-  border-radius: 50%;
-  background: rgba(67, 97, 238, 0.1);
-  border: 1px solid rgba(67, 97, 238, 0.2);
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.corp-chairs {
-  position: absolute;
-  inset: 0;
-}
-.corp-chair {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: rgba(67, 97, 238, 0.2);
-  border: 1px solid rgba(67, 97, 238, 0.25);
-  position: absolute;
-  transition: background 0.3s;
-}
-.case-card:hover .corp-chair {
-  background: rgba(67, 97, 238, 0.35);
-}
-
-/* Card 3: Festival / Outdoor */
-.case-illust-festival {
-  position: relative;
-}
-.fest-stage {
-  width: 50px;
-  height: 28px;
-  border-radius: 4px;
-  background: rgba(67, 97, 238, 0.25);
-  border: 1px solid rgba(67, 97, 238, 0.3);
-  position: absolute;
-  transition: background 0.3s;
-}
-.fest-stage-sm {
-  width: 36px;
-  height: 22px;
-  background: rgba(67, 97, 238, 0.18);
-}
-.case-card:hover .fest-stage {
-  background: rgba(67, 97, 238, 0.4);
-}
-.fest-path {
-  position: absolute;
-  border: 1px dashed rgba(67, 97, 238, 0.2);
-  border-radius: 0;
-}
-.fest-path-1 {
-  width: 40%;
-  height: 0;
-  top: 45%;
-  left: 30%;
-  transform: rotate(-15deg);
-}
-.fest-path-2 {
-  width: 0;
-  height: 35%;
-  top: 30%;
-  left: 55%;
-  transform: rotate(10deg);
-}
-.fest-booth {
-  width: 18px;
-  height: 18px;
-  border-radius: 3px;
-  background: rgba(67, 97, 238, 0.12);
-  border: 1px solid rgba(67, 97, 238, 0.18);
-  position: absolute;
-  transition: background 0.3s;
 }
 .case-card:hover .fest-booth {
   background: rgba(67, 97, 238, 0.25);

@@ -141,7 +141,7 @@
             No-code платформа для мероприятий
           </div>
           <h1 class="hero-title animate-on-scroll" style="--delay: 0.1s">
-            Конструктор приложений<br>для <span class="rotating-word-container"><span class="rotating-word text-gradient" id="rotatingWord">мероприятий</span></span>
+            Конструктор приложений для<br><span class="rotating-word-container"><span class="rotating-word text-gradient" id="rotatingWord">мероприятий</span></span>
           </h1>
           <p class="hero-subtitle animate-on-scroll" style="--delay: 0.2s">
             Соберите приложение для конференции, корпоратива или форума за&nbsp;один день. Готовые шаблоны, drag-and-drop редактор, интерактивы&nbsp;— без&nbsp;программирования.
@@ -457,20 +457,65 @@
         </div>
         <div class="cases-grid">
           <article class="case-card animate-on-scroll" style="--delay: 0s">
-            <div class="case-image" role="img" aria-label="Большой конференц-зал с рядами кресел, сценой с LED-экраном, приглушённое освещение, аудитория 500+ человек, профессиональное мероприятие">
-              <div class="case-placeholder case-illustration case-illust-conference">
-                <div class="conf-screen"></div>
-                <div class="conf-podium"></div>
-                <div class="conf-seats-row">
-                  <div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div>
-                </div>
-                <div class="conf-seats-row">
-                  <div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div>
-                </div>
-                <div class="conf-seats-row">
-                  <div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div><div class="conf-seat"></div>
-                </div>
-              </div>
+            <div class="case-image">
+              <svg class="case-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Экран приложения: программа конференции с треками и спикерами">
+                <!-- Phone frame -->
+                <rect x="100" y="8" width="200" height="204" rx="20" fill="rgba(10,10,26,0.9)" stroke="rgba(67,97,238,0.3)" stroke-width="1.5"/>
+                <!-- Status bar -->
+                <rect x="155" y="14" width="90" height="4" rx="2" fill="rgba(67,97,238,0.3)"/>
+                <!-- Header -->
+                <rect x="118" y="28" width="80" height="8" rx="2" fill="rgba(67,97,238,0.7)"/>
+                <rect x="118" y="40" width="50" height="5" rx="1.5" fill="rgba(255,255,255,0.15)"/>
+                <!-- Track tabs -->
+                <rect x="118" y="54" width="36" height="12" rx="6" fill="rgba(67,97,238,0.5)"/>
+                <rect x="160" y="54" width="36" height="12" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+                <rect x="202" y="54" width="36" height="12" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+                <!-- Session card 1 -->
+                <rect x="118" y="74" width="164" height="40" rx="8" fill="rgba(67,97,238,0.12)" stroke="rgba(67,97,238,0.2)" stroke-width="0.5"/>
+                <circle cx="134" cy="88" r="8" fill="rgba(67,97,238,0.3)"/>
+                <rect x="148" y="82" width="70" height="5" rx="1.5" fill="rgba(255,255,255,0.35)"/>
+                <rect x="148" y="91" width="100" height="4" rx="1" fill="rgba(255,255,255,0.12)"/>
+                <rect x="148" y="99" width="40" height="4" rx="1" fill="rgba(67,97,238,0.35)"/>
+                <!-- Session card 2 -->
+                <rect x="118" y="120" width="164" height="40" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+                <circle cx="134" cy="134" r="8" fill="rgba(67,97,238,0.2)"/>
+                <rect x="148" y="128" width="60" height="5" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+                <rect x="148" y="137" width="90" height="4" rx="1" fill="rgba(255,255,255,0.1)"/>
+                <rect x="148" y="145" width="35" height="4" rx="1" fill="rgba(67,97,238,0.25)"/>
+                <!-- Session card 3 -->
+                <rect x="118" y="166" width="164" height="32" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+                <circle cx="134" cy="178" r="8" fill="rgba(67,97,238,0.15)"/>
+                <rect x="148" y="173" width="55" height="5" rx="1.5" fill="rgba(255,255,255,0.2)"/>
+                <rect x="148" y="182" width="80" height="4" rx="1" fill="rgba(255,255,255,0.08)"/>
+                <!-- Floating Q&A badge -->
+                <g filter="url(#conf-shadow)">
+                  <rect x="40" y="55" width="56" height="56" rx="14" fill="rgba(15,15,35,0.95)" stroke="rgba(67,97,238,0.4)" stroke-width="1"/>
+                  <path d="M60 74v-2a4 4 0 014-4h8a4 4 0 014 4v2" stroke="rgba(67,97,238,0.8)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                  <circle cx="68" cy="64" r="3" stroke="rgba(67,97,238,0.8)" stroke-width="1.5" fill="none"/>
+                  <text x="68" y="92" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="6" font-family="sans-serif">Q&amp;A</text>
+                </g>
+                <!-- Floating live badge -->
+                <g filter="url(#conf-shadow)">
+                  <rect x="310" y="40" width="56" height="56" rx="14" fill="rgba(15,15,35,0.95)" stroke="rgba(67,97,238,0.4)" stroke-width="1"/>
+                  <circle cx="338" cy="62" r="6" fill="none" stroke="rgba(238,67,67,0.8)" stroke-width="1.5"/>
+                  <circle cx="338" cy="62" r="2.5" fill="rgba(238,67,67,0.8)"/>
+                  <text x="338" y="80" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="6" font-family="sans-serif">LIVE</text>
+                </g>
+                <!-- Floating networking badge -->
+                <g filter="url(#conf-shadow)">
+                  <rect x="315" y="130" width="56" height="56" rx="14" fill="rgba(15,15,35,0.95)" stroke="rgba(67,97,238,0.4)" stroke-width="1"/>
+                  <circle cx="335" cy="150" r="4" stroke="rgba(67,97,238,0.7)" stroke-width="1.2" fill="none"/>
+                  <circle cx="347" cy="148" r="4" stroke="rgba(67,97,238,0.5)" stroke-width="1.2" fill="none"/>
+                  <path d="M331 158a6 6 0 0112 0" stroke="rgba(67,97,238,0.5)" stroke-width="1" fill="none"/>
+                  <text x="343" y="172" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="5.5" font-family="sans-serif">Network</text>
+                </g>
+                <!-- Glow effects -->
+                <defs>
+                  <filter id="conf-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(67,97,238,0.15)"/>
+                  </filter>
+                </defs>
+              </svg>
             </div>
             <div class="case-content">
               <h3 class="case-title">Конференция / форум</h3>
@@ -485,19 +530,76 @@
           </article>
 
           <article class="case-card animate-on-scroll" style="--delay: 0.15s">
-            <div class="case-image" role="img" aria-label="Корпоративное мероприятие в современном пространстве: сотрудники в smart casual общаются группами, брендированные элементы декора">
-              <div class="case-placeholder case-illustration case-illust-corporate">
-                <div class="corp-whiteboard"></div>
-                <div class="corp-table"></div>
-                <div class="corp-chairs">
-                  <div class="corp-chair" style="top: 20%; left: 15%"></div>
-                  <div class="corp-chair" style="top: 20%; right: 15%"></div>
-                  <div class="corp-chair" style="top: 50%; left: 8%"></div>
-                  <div class="corp-chair" style="top: 50%; right: 8%"></div>
-                  <div class="corp-chair" style="bottom: 15%; left: 20%"></div>
-                  <div class="corp-chair" style="bottom: 15%; right: 20%"></div>
-                </div>
-              </div>
+            <div class="case-image">
+              <svg class="case-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Экран приложения: корпоративное мероприятие с QR check-in и брендингом">
+                <!-- Phone frame -->
+                <rect x="100" y="8" width="200" height="204" rx="20" fill="rgba(10,10,26,0.9)" stroke="rgba(67,97,238,0.3)" stroke-width="1.5"/>
+                <rect x="155" y="14" width="90" height="4" rx="2" fill="rgba(67,97,238,0.3)"/>
+                <!-- Brand header with logo placeholder -->
+                <rect x="112" y="26" width="176" height="36" rx="8" fill="linear-gradient(135deg, rgba(67,97,238,0.2), rgba(67,97,238,0.08))"/>
+                <rect x="112" y="26" width="176" height="36" rx="8" fill="rgba(67,97,238,0.12)"/>
+                <circle cx="134" cy="44" r="10" fill="rgba(67,97,238,0.3)" stroke="rgba(67,97,238,0.5)" stroke-width="0.8"/>
+                <text x="136" y="47" text-anchor="middle" fill="rgba(67,97,238,0.7)" font-size="8" font-family="sans-serif" font-weight="bold">C</text>
+                <rect x="150" y="38" width="70" height="6" rx="2" fill="rgba(255,255,255,0.3)"/>
+                <rect x="150" y="48" width="45" height="4" rx="1" fill="rgba(255,255,255,0.12)"/>
+                <!-- QR Check-in section -->
+                <rect x="118" y="70" width="164" height="50" rx="10" fill="rgba(67,97,238,0.08)" stroke="rgba(67,97,238,0.15)" stroke-width="0.5"/>
+                <!-- QR code mini -->
+                <g transform="translate(132, 78)">
+                  <rect width="32" height="32" rx="4" fill="rgba(255,255,255,0.08)"/>
+                  <rect x="4" y="4" width="8" height="8" rx="1" fill="rgba(67,97,238,0.5)"/>
+                  <rect x="14" y="4" width="4" height="4" rx="0.5" fill="rgba(67,97,238,0.3)"/>
+                  <rect x="20" y="4" width="8" height="8" rx="1" fill="rgba(67,97,238,0.5)"/>
+                  <rect x="4" y="14" width="4" height="4" rx="0.5" fill="rgba(67,97,238,0.3)"/>
+                  <rect x="10" y="14" width="4" height="4" rx="0.5" fill="rgba(67,97,238,0.4)"/>
+                  <rect x="20" y="14" width="4" height="4" rx="0.5" fill="rgba(67,97,238,0.3)"/>
+                  <rect x="4" y="20" width="8" height="8" rx="1" fill="rgba(67,97,238,0.5)"/>
+                  <rect x="14" y="20" width="4" height="4" rx="0.5" fill="rgba(67,97,238,0.35)"/>
+                  <rect x="20" y="20" width="4" height="4" rx="0.5" fill="rgba(67,97,238,0.25)"/>
+                  <rect x="14" y="26" width="4" height="4" rx="0.5" fill="rgba(67,97,238,0.2)"/>
+                </g>
+                <rect x="174" y="84" width="60" height="6" rx="2" fill="rgba(255,255,255,0.25)"/>
+                <rect x="174" y="94" width="80" height="4" rx="1" fill="rgba(255,255,255,0.1)"/>
+                <rect x="174" y="102" width="50" height="4" rx="1" fill="rgba(67,97,238,0.3)"/>
+                <!-- Agenda items -->
+                <rect x="118" y="128" width="164" height="28" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+                <rect x="126" y="134" width="4" height="16" rx="2" fill="rgba(67,97,238,0.5)"/>
+                <rect x="136" y="136" width="55" height="5" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+                <rect x="136" y="145" width="80" height="3.5" rx="1" fill="rgba(255,255,255,0.08)"/>
+                <rect x="118" y="162" width="164" height="28" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+                <rect x="126" y="168" width="4" height="16" rx="2" fill="rgba(67,97,238,0.3)"/>
+                <rect x="136" y="170" width="50" height="5" rx="1.5" fill="rgba(255,255,255,0.2)"/>
+                <rect x="136" y="179" width="70" height="3.5" rx="1" fill="rgba(255,255,255,0.07)"/>
+                <!-- Floating branding badge -->
+                <g filter="url(#corp-shadow)">
+                  <rect x="30" y="50" width="60" height="60" rx="14" fill="rgba(15,15,35,0.95)" stroke="rgba(67,97,238,0.4)" stroke-width="1"/>
+                  <rect x="44" y="62" width="32" height="6" rx="3" fill="rgba(67,97,238,0.5)"/>
+                  <rect x="44" y="72" width="32" height="6" rx="3" fill="rgba(127,90,240,0.4)"/>
+                  <rect x="44" y="82" width="32" height="6" rx="3" fill="rgba(67,97,238,0.25)"/>
+                  <text x="60" y="98" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="5.5" font-family="sans-serif">Brand</text>
+                </g>
+                <!-- Floating check-in badge -->
+                <g filter="url(#corp-shadow)">
+                  <rect x="316" y="35" width="56" height="56" rx="14" fill="rgba(15,15,35,0.95)" stroke="rgba(67,97,238,0.4)" stroke-width="1"/>
+                  <circle cx="344" cy="55" r="10" stroke="rgba(72,199,142,0.7)" stroke-width="1.5" fill="none"/>
+                  <path d="M338 55l4 4 8-8" stroke="rgba(72,199,142,0.8)" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <text x="344" y="78" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="5.5" font-family="sans-serif">Check-in</text>
+                </g>
+                <!-- Floating materials badge -->
+                <g filter="url(#corp-shadow)">
+                  <rect x="320" y="125" width="56" height="56" rx="14" fill="rgba(15,15,35,0.95)" stroke="rgba(67,97,238,0.4)" stroke-width="1"/>
+                  <rect x="334" y="138" width="20" height="24" rx="2" fill="none" stroke="rgba(67,97,238,0.6)" stroke-width="1.2"/>
+                  <rect x="338" y="144" width="12" height="2" rx="1" fill="rgba(67,97,238,0.4)"/>
+                  <rect x="338" y="148" width="10" height="2" rx="1" fill="rgba(67,97,238,0.3)"/>
+                  <rect x="338" y="152" width="8" height="2" rx="1" fill="rgba(67,97,238,0.2)"/>
+                  <text x="348" y="172" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="5.5" font-family="sans-serif">Docs</text>
+                </g>
+                <defs>
+                  <filter id="corp-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(67,97,238,0.15)"/>
+                  </filter>
+                </defs>
+              </svg>
             </div>
             <div class="case-content">
               <h3 class="case-title">Корпоратив / обучение</h3>
@@ -512,18 +614,87 @@
           </article>
 
           <article class="case-card animate-on-scroll" style="--delay: 0.3s">
-            <div class="case-image" role="img" aria-label="Фестиваль на открытом воздухе: несколько сцен, стенды, навигационные указатели, большой поток людей, яркое дневное освещение">
-              <div class="case-placeholder case-illustration case-illust-festival">
-                <div class="fest-stage" style="top: 10%; left: 10%"></div>
-                <div class="fest-stage fest-stage-sm" style="top: 15%; right: 15%"></div>
-                <div class="fest-stage fest-stage-sm" style="bottom: 25%; left: 35%"></div>
-                <div class="fest-path fest-path-1"></div>
-                <div class="fest-path fest-path-2"></div>
-                <div class="fest-booth" style="bottom: 15%; left: 12%"></div>
-                <div class="fest-booth" style="bottom: 10%; right: 25%"></div>
-                <div class="fest-booth" style="top: 45%; right: 10%"></div>
-                <div class="fest-booth" style="top: 50%; left: 22%"></div>
-              </div>
+            <div class="case-image">
+              <svg class="case-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Экран приложения: интерактивная карта фестиваля со стендами и сценами">
+                <!-- Phone frame -->
+                <rect x="100" y="8" width="200" height="204" rx="20" fill="rgba(10,10,26,0.9)" stroke="rgba(67,97,238,0.3)" stroke-width="1.5"/>
+                <rect x="155" y="14" width="90" height="4" rx="2" fill="rgba(67,97,238,0.3)"/>
+                <!-- Header -->
+                <rect x="118" y="28" width="60" height="7" rx="2" fill="rgba(67,97,238,0.6)"/>
+                <rect x="118" y="39" width="40" height="4" rx="1" fill="rgba(255,255,255,0.12)"/>
+                <!-- Map area -->
+                <rect x="112" y="50" width="176" height="120" rx="10" fill="rgba(67,97,238,0.04)" stroke="rgba(67,97,238,0.1)" stroke-width="0.5"/>
+                <!-- Grid paths -->
+                <line x1="112" y1="80" x2="288" y2="80" stroke="rgba(67,97,238,0.08)" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <line x1="112" y1="110" x2="288" y2="110" stroke="rgba(67,97,238,0.08)" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <line x1="112" y1="140" x2="288" y2="140" stroke="rgba(67,97,238,0.08)" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <line x1="160" y1="50" x2="160" y2="170" stroke="rgba(67,97,238,0.08)" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <line x1="210" y1="50" x2="210" y2="170" stroke="rgba(67,97,238,0.08)" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <line x1="255" y1="50" x2="255" y2="170" stroke="rgba(67,97,238,0.08)" stroke-width="0.5" stroke-dasharray="3,3"/>
+                <!-- Main stage -->
+                <rect x="165" y="55" width="50" height="22" rx="4" fill="rgba(67,97,238,0.25)" stroke="rgba(67,97,238,0.4)" stroke-width="0.8"/>
+                <text x="190" y="69" text-anchor="middle" fill="rgba(67,97,238,0.7)" font-size="7" font-family="sans-serif" font-weight="600">Stage A</text>
+                <!-- Stage B -->
+                <rect x="260" y="85" width="22" height="38" rx="4" fill="rgba(127,90,240,0.2)" stroke="rgba(127,90,240,0.35)" stroke-width="0.8"/>
+                <text x="271" y="108" text-anchor="middle" fill="rgba(127,90,240,0.6)" font-size="6" font-family="sans-serif">B</text>
+                <!-- Booth clusters -->
+                <rect x="120" y="56" width="16" height="16" rx="3" fill="rgba(72,199,142,0.2)" stroke="rgba(72,199,142,0.35)" stroke-width="0.6"/>
+                <rect x="120" y="76" width="16" height="16" rx="3" fill="rgba(72,199,142,0.15)" stroke="rgba(72,199,142,0.25)" stroke-width="0.6"/>
+                <rect x="138" y="56" width="16" height="16" rx="3" fill="rgba(72,199,142,0.15)" stroke="rgba(72,199,142,0.25)" stroke-width="0.6"/>
+                <!-- Food zone -->
+                <rect x="120" y="118" width="34" height="18" rx="5" fill="rgba(238,183,67,0.15)" stroke="rgba(238,183,67,0.3)" stroke-width="0.6"/>
+                <text x="137" y="130" text-anchor="middle" fill="rgba(238,183,67,0.5)" font-size="6" font-family="sans-serif">Food</text>
+                <!-- WC / Info -->
+                <circle cx="275" cy="62" r="7" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+                <text x="275" y="65" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-size="6" font-family="sans-serif">i</text>
+                <!-- Booth area bottom -->
+                <rect x="170" y="118" width="18" height="18" rx="3" fill="rgba(67,97,238,0.15)" stroke="rgba(67,97,238,0.25)" stroke-width="0.6"/>
+                <rect x="192" y="118" width="18" height="18" rx="3" fill="rgba(67,97,238,0.1)" stroke="rgba(67,97,238,0.2)" stroke-width="0.6"/>
+                <rect x="214" y="118" width="18" height="18" rx="3" fill="rgba(67,97,238,0.15)" stroke="rgba(67,97,238,0.25)" stroke-width="0.6"/>
+                <rect x="236" y="118" width="18" height="18" rx="3" fill="rgba(67,97,238,0.1)" stroke="rgba(67,97,238,0.2)" stroke-width="0.6"/>
+                <!-- Location pin animated -->
+                <g transform="translate(195, 88)">
+                  <circle r="12" fill="rgba(67,97,238,0.12)"/>
+                  <circle r="6" fill="rgba(67,97,238,0.25)"/>
+                  <circle r="2.5" fill="rgba(67,97,238,0.7)"/>
+                </g>
+                <!-- Entry arrow -->
+                <rect x="195" y="145" width="12" height="20" rx="3" fill="rgba(72,199,142,0.2)" stroke="rgba(72,199,142,0.35)" stroke-width="0.6"/>
+                <text x="201" y="159" text-anchor="middle" fill="rgba(72,199,142,0.5)" font-size="7" font-family="sans-serif">&#8593;</text>
+                <!-- Bottom nav -->
+                <rect x="118" y="178" width="164" height="24" rx="8" fill="rgba(255,255,255,0.04)"/>
+                <circle cx="148" cy="190" r="5" fill="rgba(67,97,238,0.4)"/>
+                <circle cx="183" cy="190" r="5" fill="rgba(255,255,255,0.08)"/>
+                <circle cx="218" cy="190" r="5" fill="rgba(255,255,255,0.08)"/>
+                <circle cx="253" cy="190" r="5" fill="rgba(255,255,255,0.08)"/>
+                <!-- Floating map badge -->
+                <g filter="url(#fest-shadow)">
+                  <rect x="30" y="45" width="60" height="60" rx="14" fill="rgba(15,15,35,0.95)" stroke="rgba(67,97,238,0.4)" stroke-width="1"/>
+                  <path d="M50 66l10-8 10 5 10-7v20l-10 7-10-5-10 8z" fill="rgba(67,97,238,0.2)" stroke="rgba(67,97,238,0.5)" stroke-width="1" stroke-linejoin="round"/>
+                  <text x="60" y="96" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="5.5" font-family="sans-serif">Map</text>
+                </g>
+                <!-- Floating vote badge -->
+                <g filter="url(#fest-shadow)">
+                  <rect x="315" y="40" width="56" height="56" rx="14" fill="rgba(15,15,35,0.95)" stroke="rgba(67,97,238,0.4)" stroke-width="1"/>
+                  <path d="M335 62l4-8 4 3 6-10" stroke="rgba(238,183,67,0.7)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="349" cy="47" r="3" fill="rgba(238,183,67,0.5)"/>
+                  <text x="343" y="82" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="5.5" font-family="sans-serif">Vote</text>
+                </g>
+                <!-- Floating chat badge -->
+                <g filter="url(#fest-shadow)">
+                  <rect x="320" y="130" width="56" height="56" rx="14" fill="rgba(15,15,35,0.95)" stroke="rgba(67,97,238,0.4)" stroke-width="1"/>
+                  <rect x="334" y="142" width="22" height="16" rx="4" fill="none" stroke="rgba(72,199,142,0.6)" stroke-width="1.2"/>
+                  <path d="M340 162l4-4h6" stroke="rgba(72,199,142,0.6)" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="340" y="148" width="10" height="2" rx="1" fill="rgba(72,199,142,0.35)"/>
+                  <rect x="340" y="152" width="7" height="2" rx="1" fill="rgba(72,199,142,0.25)"/>
+                  <text x="348" y="174" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="5.5" font-family="sans-serif">Chat</text>
+                </g>
+                <defs>
+                  <filter id="fest-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(67,97,238,0.15)"/>
+                  </filter>
+                </defs>
+              </svg>
             </div>
             <div class="case-content">
               <h3 class="case-title">Фестиваль / выставка</h3>
@@ -883,7 +1054,7 @@
           <div class="demo-content animate-on-scroll">
             <span class="section-label">14 дней бесплатно</span>
             <h2 class="section-title">Попробуйте<br><span class="text-gradient">бесплатно</span></h2>
-            <p class="demo-desc">Полный доступ ко всем функциям на 14 дней — без привязки карты. Создайте тестовое мероприятие прямо сейчас.</p>
+            <p class="demo-desc">Полный доступ ко всем функциям на 14 дней — без привязки карты. Создайте тестовое мероприятие прямо сейчас. AI-ассистент проведёт вас через весь процесс создания и поможет настроить каждый раздел.</p>
           </div>
           <form class="demo-form animate-on-scroll" style="--delay: 0.15s" id="demoForm" action="https://formspree.io/f/xwpkgdvl" method="POST">
             <div class="form-group">

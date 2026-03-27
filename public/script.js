@@ -100,7 +100,7 @@
         void rotatingWordEl.offsetWidth;
         rotatingWordEl.classList.remove('fade-in');
       }, 400);
-    }, 2500);
+    }, 3000);
   }
 
   /* ---- Demo form ---- */
